@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Landing Page</title>
+</head>
+<body id="home">
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">E-commerce</h1>
+            <!-- 
+            <ul class="nav">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            -->
+        </div>
+    </nav>
+
+    <section class="section-a">
+        <div class="container">
+            <div>
+                <h1>Black Friday</h1>
+                <p class="subTexto">Hora de Aproveitar!</p>
+                <a href="#section2" class="btn">Clique aqui</a>
+            </div>
+            <img class="image-principal" src="images/sacola-compras.png" alt="sacola de compras">
+        </div>
+    </section>
+
+    <section class="section-b" id="section2">
+        <div class="overlay">
+            <div class="section-b-inner">
+                <h2>Cadastre seu e-mail para receber as Ofertas</h2>
+            <div class="email-form">
+                <span class="form-control-wrap"> 
+                    <input type="email" name="email" id="email" size="40" class="form-control" placeholder="Email">
+                </span>
+                <button onclick="validate()" type="submit" class="form-control submit">Enviar</button>  
+            </div> 
+            </div>
+        </div>
+    </section>
+
+<!-- Rodapé
+    <footer class="section-footer">
+        <div class="container">
+            <div>
+                <h2>Lorem ipsum dolor sit</h2>
+            </div>
+        </div>
+    </footer>
+
+        function showAlert() {
+      var confirmarEnvio = "Obrigado por seu e-mail!";
+      alert (confirmarEnvio);
+    }
+-->
+<script>
+    function validate() {
+        var email = document.getElementById('email').value;
+        var modeloDeEmail = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+
+        if(modeloDeEmail.test(email)){
+            alert("Obrigado por seu e-mail!")
+            return true;
+        } else {
+            alert("Por favor digite um e-mail válido.")
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
